@@ -19,26 +19,39 @@ import java.util.*;
 public class GroupAnagram {
 
     public List<List<String>> groupAnagrams(String[] strs) {
+        // HashMap: key = frequency pattern, value = list of anagrams with that pattern
         Map<String, List<String>> map = new HashMap<>();
 
+        // Process each string in the input array
         for (String s : strs) {
+            // Create a frequency array for 26 lowercase letters
             int[] nums = new int[26];
             Arrays.fill(nums, 0);
+
+            // Count frequency of each character in the current string
             for (char c: s.toCharArray()) {
-                nums[c - 'a']++;
+                nums[c - 'a']++;  // Increment count for character c
             }
+
+            // Convert frequency array to a string key (e.g., "#1#1#1#0#0...")
+            // This key will be identical for all anagrams
             StringBuilder sb = new StringBuilder();
             for(int i=0;i<nums.length;i++) {
-                    sb.append("#");
+                    sb.append("#");  // Use # as delimiter to avoid ambiguity
                     sb.append(nums[i]);
             }
+
+            // Group strings by their frequency key
             if (map.containsKey(sb.toString())) {
+                // Key exists: add string to existing group
                 map.get(sb.toString()).add(s);
             } else {
+                // Key doesn't exist: create new group with this string
                 map.put(sb.toString(), new ArrayList<>(Arrays.asList(s)));
             }
         }
 
+        // Return all groups as a list (order doesn't matter as per problem)
         return new ArrayList<>(map.values());
     }
 

@@ -8,11 +8,18 @@ A collection of LeetCode problem solutions implemented in Java, focusing on fund
 
 | Problem # | Problem Title | File Name | Approach | Time | Space |
 |-----------|---------------|-----------|----------|------|-------|
-| 217 | Contains Duplicate | `DuplicatesI.java` | HashSet for O(1) lookup | O(n) | O(n) |
-| 219 | Contains Duplicate II | `DuplicatesII.java` | HashMap storing most recent index | O(n) | O(min(n, k)) |
-| 242 | Valid Anagram | `ValidAnagram.java` | Character frequency counting | O(n) | O(1) |
 | 1 | Two Sum | `TwoSum.java` | HashMap storing complement values | O(n) | O(n) |
+| 11 | Container With Most Water | `ContainerWithMostWater.java` | Two-pointer greedy approach | O(n) | O(1) |
+| 26 | Remove Duplicates from Sorted Array | `RemoveDuplicateInSortedArray.java` | Two-pointer technique | O(n) | O(1) |
+| 49 | Group Anagrams | `GroupAnagram.java` | Character frequency mapping | O(n*k log k) | O(n*k) |
+| 125 | Valid Palindrome | `ValidPalindrome.java` | Two-pointer with preprocessing | O(n) | O(1) |
 | 167 | Two Sum II - Input Array Is Sorted | `TwoSum2.java` | Two-pointer technique | O(n) | O(1) |
+| 217 | Contains Duplicate | `Duplicates.java` | HashSet for O(1) lookup | O(n) | O(n) |
+| 219 | Contains Duplicate II | `DuplicatesII.java` | HashMap storing most recent index | O(n) | O(min(n, k)) |
+| 238 | Product of Array Except Self | `productofArrayExceptSelf.java` | Prefix and suffix products | O(n) | O(n) |
+| 242 | Valid Anagram | `ValidAnagram.java` | Character frequency counting | O(n) | O(1) |
+| 724 | Find Pivot Index | `PivotalIndex.java` | Prefix sum technique | O(n) | O(1) |
+| 2461 | Maximum Sum of Distinct Subarrays With Length K | `MaximunSumOfDistinctInSubArray.java` | Sliding window with HashSet | O(n) | O(k) |
 
 ## 🚀 How to Run
 
